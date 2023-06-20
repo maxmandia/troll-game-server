@@ -8,6 +8,10 @@ admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
 });
 
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
+
 app.get("/add-point", async (req, res) => {
   const { name } = req.query;
 
